@@ -1,3 +1,12 @@
+# Every 3 seconds
+# --- Collision: Player hits bomb ---
+
+def on_on_overlap(sprite2, other2):
+    info.change_life_by(-1)
+    other2.destroy(effects.fire, 200)
+    music.wawawawaa.play()
+sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap)
+
 # --- Reset Button ---
 
 def on_b_pressed():
@@ -31,20 +40,11 @@ info.on_life_zero(on_life_zero)
 # Every 2 seconds
 # --- Collision: Player collects apple ---
 
-def on_on_overlap(sprite, other):
+def on_on_overlap2(sprite, other):
     info.change_score_by(1)
     other.destroy(effects.confetti, 200)
     music.ba_ding.play()
-sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_on_overlap)
-
-# Every 3 seconds
-# --- Collision: Player hits bomb ---
-
-def on_on_overlap2(sprite2, other2):
-    info.change_life_by(-1)
-    other2.destroy(effects.fire, 200)
-    music.wawawawaa.play()
-sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap2)
+sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_on_overlap2)
 
 bomb: Sprite = None
 apple: Sprite = None

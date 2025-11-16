@@ -51,6 +51,7 @@ player1 = sprites.create(img`
     `, SpriteKind.Player)
 player1.setPosition(80, 60)
 controller.moveSprite(player1, 100, 0)
+player1.setBounceOnWall(true)
 // Only horizontal movement
 // --- Setup Game Info ---
 info.setLife(3)
