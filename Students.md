@@ -37,6 +37,7 @@
 - Connect it under your player block
 - Set vx = 100 and vy = 0 (only left/right)
 - ✔ Now you can move using arrow keys
+- Add Bounce on wall for player kind
 
 ✳️ STEP 5 – Add Score and Lives
 
